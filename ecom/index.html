@@ -52,6 +52,40 @@ body {
   .btn { display: none; }
   .print-link { display: block; color: #1a0dab; text-decoration: underline; }
 }
+
+
+.fab {
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: 16px;
+  right: 16px;
+  background: #1F4FD1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 2147483647;
+  pointer-events: auto;
+}
+.fab:hover { background: #163a9c; }
+@media (max-width: 767px) {
+  body { padding-bottom: 96px; } /* чтобы контент не прятался под кнопкой */
+}
+@media (min-width: 768px) {
+  .fab {
+    left: auto;
+    right: 24px;
+    min-width: 280px;
+    max-width: 360px;
+    border-radius: 12px;
+  }
+}
+@media print { .fab { display: none; } }
+
+
 </style>
 </head>
 <body>
@@ -178,5 +212,6 @@ body {
       </aside>
     </section>
   </main>
+<a href="https://t.me/dm3krxh" target="_blank" class="fab">💬 Написать мне в Telegram</a>
 </body>
 </html>
